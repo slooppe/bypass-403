@@ -1,0 +1,22 @@
+# Bypass 403
+
+Try to bypass HTTP 403 by sending headers that try to make the tested server think that
+the request comes from localhost thus allowing you to view the page.
+
+## Usage Example
+
+Here, a file called `urls.txt` contains a list of urls that you want to check.
+
+```
+▶ cat urls.txt
+https://google.com
+https://twitter.com
+
+▶ cat urls.txt | ./bypass_403 -timeout 10 -threads 10
+```
+
+## Install
+
+```
+▶ go get -u github.com/amourha/bypass-403
+```
